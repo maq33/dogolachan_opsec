@@ -37,7 +37,7 @@ TOR_CONTROL_PASSWD="$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 24)"
 TOR_OPTS=""
 
 pause_and_exit() {
-echo "Type Q to quit"
+echo "Digite Q para sair"
 read -r EXIT
   if [ ! "${EXIT}" = "Q" ]; then
     pause_and_exit
