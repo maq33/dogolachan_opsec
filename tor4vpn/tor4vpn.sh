@@ -221,7 +221,7 @@ PidFile ${DATADIR}/torpid
     if [ "$(command -v fteproxy)" ]; then
       echo "ClientTransportPlugin fte exec $(command -v fteproxy) --managed" >> ${DATADIR}/torrc
     fi
-    cat --squeeze-blank ${HERE}/resources/tor-fortress-bridges.list | shuf -n 20 | while read line;
+    cat --squeeze-blank ${HERE}/tor-bridges.list | shuf -n 20 | while read line;
       do
         echo "Bridge ${line}" >> ${DATADIR}/torrc
       done
